@@ -1,14 +1,5 @@
-const express = require('express');
-const xss = require('xss');
 const axios = require('axios');
-// const foldersRouter = express.Router();
-const apiToken = process.env.API_TOKEN;
-
-const searchRequest = {
-    term:'name of filer Restaurant, bar, etc',
-    location: 'san francisco, ca',
-    offsetLimit: 900
-};
+const apiToken = process.env.YELP_API_TOKEN;
 
 ////Parameters
 //////////response body values
@@ -18,26 +9,18 @@ const searchRequest = {
 // businesses[x].price
 // businesses[x].url
 
-const urlString = `https://api.yelp.com/v3//businesses/search?term=${searchRequest.term}&location=${searchRequest.location}&limit=50&offset=${searchRequest.offsetLimit}`;
+const yelpAPICall = (data) => {
+    const config = {
+        method: 'get',
+        url: `api.yelp.com/v3//businesses/search?term=${data.term}&location=${data.location}&limit=50&offset=${data.offset}`,
+        headers: {
+            'Authorization': `Bearer ${apiToken}`,
+            'Content-Type': 'application/json'
+        },
+        data : data
+    };
 
+    return axios(config)
+}
 
-
-const config = {
-    method: 'get',
-    url: urlString,
-    headers: {
-        'Authorization': 'Bearer ' + {apiToken},
-        'Content-Type': 'application/json'
-    },
-};
-
-axios(config)
-    .then(function (response) {
-        console.log(JSON.stringify(response.data));
-    })
-    .catch(function (error) {
-        console.log(error);
-    });
-
-
-module.exports = yelp-api;
+module.exports = yelpAPICall

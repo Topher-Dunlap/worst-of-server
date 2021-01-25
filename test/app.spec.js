@@ -1,4 +1,6 @@
 const app = require('../src/app')
+// const {expect} = require('chai');
+const supertest = require('supertest');
 
 describe('App', () => {
     it('GET / responds with 200 containing "Hello, world!"', () => {
@@ -7,3 +9,4 @@ describe('App', () => {
             .expect(200, 'Hello, world!')
     })
 })
+

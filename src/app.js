@@ -4,6 +4,7 @@ const morgan = require('morgan')
 const cors = require('cors')
 const helmet = require('helmet')
 const { NODE_ENV } = require('./config')
+const yelpAPICall = require('./yelp-api/yelp-api')
 
 const app = express()
 
@@ -25,9 +26,20 @@ app.use(cors())
 //     next()
 // })
 
-app.get('/api/search', (req, res) => {
-    res.send("path /api/search")
-    // res.send(JSON.parse(res))
+app.get('/api/search?*', (req, res) => {
+    const apiQueryValues = {
+        term: req.query.term,
+        location: req.query.term,
+        offset: req.query.offset,
+    }
+    yelpAPICall(apiQueryValues)
+        .then(function (response) {
+            console.dir("axios yelp response: ", response);
+            return response;
+        })
+        .catch(function (error) {
+            console.log(error);
+        });
 })
 
 app.get('/', (req, res) => {
