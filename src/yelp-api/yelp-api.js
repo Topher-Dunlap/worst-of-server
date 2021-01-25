@@ -11,8 +11,6 @@ const searchRequest = {
 };
 
 ////Parameters
-
-
 //////////response body values
 // businesses[x].rating
 // businesses[x].image_url
@@ -42,4 +40,4 @@ axios(config)
     });
 
 
-module.exports = foldersRouter;
+module.exports = yelp-api;
