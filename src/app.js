@@ -29,14 +29,16 @@ app.use(cors())
 app.get('/api/search?*', (req, res) => {
     const apiQueryValues = {
         term: req.query.term,
-        location: req.query.term,
+        location: req.query.location,
         offset: req.query.offset,
     }
+    console.dir(apiQueryValues)
     yelpAPICall(apiQueryValues)
+
         .then(function (response) {
-            console.dir("axios yelp response: ", response);
-            return response;
+            console.log(JSON.stringify(response.data));
         })
+        .then(resJson => console.log(resJson))
         .catch(function (error) {
             console.log(error);
         });

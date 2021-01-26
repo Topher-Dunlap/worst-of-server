@@ -5,7 +5,6 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/yelp-api/yelp-api.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/yelp-api/yelp-api.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/app.spec.js" beforeDir="false" afterPath="$PROJECT_DIR$/test/app.spec.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,7 +35,7 @@
       <option name="presentableId" value="Default" />
       <updated>1607316369536</updated>
       <workItem from="1607316371651" duration="1244000" />
-      <workItem from="1611415414538" duration="25032000" />
+      <workItem from="1611415414538" duration="29211000" />
     </task>
     <servers />
   </component>

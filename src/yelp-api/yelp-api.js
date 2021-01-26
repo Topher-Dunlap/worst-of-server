@@ -12,7 +12,7 @@ const apiToken = process.env.YELP_API_TOKEN;
 const yelpAPICall = (data) => {
     const config = {
         method: 'get',
-        url: `api.yelp.com/v3//businesses/search?term=${data.term}&location=${data.location}&limit=50&offset=${data.offset}`,
+        url: `https://api.yelp.com/v3/businesses/search?term=${data.term}&location=${data.location}&limit=50&offset=${data.offset}`,
         headers: {
             'Authorization': `Bearer ${apiToken}`,
             'Content-Type': 'application/json'
