@@ -36,8 +36,11 @@ app.get('/api/search?*', (req, res) => {
     yelpService.yelpAPICall(apiQueryValues)
         .then(function (response) {
             const yelpRes = (JSON.stringify(response.data));
-            // console.dir(yelpService.yelpDataClean(yelpRes))
-            // res.send(yelpService.yelpDataClean(yelpRes));
+            const yelpResParse = (JSON.parse(yelpRes));
+            // console.dir(yelpResParse)
+            // console.dir(yelpService.yelpDataClean(yelpResParse))
+            // res.send("pre res.send")
+            res.send(yelpService.yelpDataClean(yelpResParse));
         })
         .catch(function (error) {
             console.log(error);

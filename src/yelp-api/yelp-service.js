@@ -17,12 +17,11 @@ const yelpService = {
     },
 
     yelpDataClean(apiRes) {
-        let size = 3;
+        let size = 3
         let sortedData = apiRes.businesses.sort(function(a, b) {
             return (a.rating - b.rating)
         });
         return sortedData.slice(0, size)},
-
 }
 
 module.exports = yelpService
