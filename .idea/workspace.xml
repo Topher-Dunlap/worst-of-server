@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c1f97f2b-40b5-4e2b-8465-b3574158f218" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/yelp-api/yelp-api.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/yelp-api/yelp-api.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/yelp-api/yelp-service.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/yelp-api/yelp-service.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

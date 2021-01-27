@@ -4,7 +4,7 @@ const morgan = require('morgan')
 const cors = require('cors')
 const helmet = require('helmet')
 const { NODE_ENV } = require('./config')
-const yelpAPICall = require('./yelp-api/yelp-api')
+const yelpService = require('./yelp-api/yelp-service')
 
 const app = express()
 
@@ -33,12 +33,12 @@ app.get('/api/search?*', (req, res) => {
         offset: req.query.offset,
     }
     console.dir(apiQueryValues)
-    yelpAPICall(apiQueryValues)
-
+    yelpService.yelpAPICall(apiQueryValues)
         .then(function (response) {
-            console.log(JSON.stringify(response.data));
+            const yelpRes = (JSON.stringify(response.data));
+            console.dir(yelpService.yelpDataClean(yelpRes))
+            res.send(yelpService.yelpDataClean(yelpRes));
         })
-        .then(resJson => console.log(resJson))
         .catch(function (error) {
             console.log(error);
         });
