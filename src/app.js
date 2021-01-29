@@ -38,6 +38,7 @@ app.get('/api/search?*', (req, res) => {
         location: req.query.location,
         offset: req.query.offset,
     }
+    console.log("apiQueryValues server side: ", apiQueryValues)
     yelpService.yelpAPICall(apiQueryValues)
         .then(function (response) {
             const yelpResString = (JSON.stringify(response.data));
