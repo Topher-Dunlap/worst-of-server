@@ -26,11 +26,11 @@ app.use(cors())
 //     next()
 // })
 
-app.use(function(req, res, next) {
-    res.header("Access-Control-Allow-Origin", "https://worst-of-client-7ow35okke.vercel.app/"); // update to match the domain you will make the request from
-    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
-    next();
-});
+// app.use(function(req, res, next) {
+//     res.header("Access-Control-Allow-Origin", "https://worst-of-client-7ow35okke.vercel.app/"); // update to match the domain you will make the request from
+//     res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+//     next();
+// });
 
 app.get('/api/search?*', (req, res) => {
     const apiQueryValues = {
