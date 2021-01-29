@@ -32,12 +32,12 @@ app.get('/api/search?*', (req, res) => {
         location: req.query.location,
         offset: req.query.offset,
     }
-    console.dir(apiQueryValues)
     yelpService.yelpAPICall(apiQueryValues)
         .then(function (response) {
             const yelpResString = (JSON.stringify(response.data));
             const yelpResParse = (JSON.parse(yelpResString))
-            res.json(yelpService.yelpDataClean(yelpResParse));
+            const cleanedData = yelpService.yelpDataClean(yelpResParse)
+            res.json(cleanedData);
         })
         .catch(function (error) {
             console.log(error);

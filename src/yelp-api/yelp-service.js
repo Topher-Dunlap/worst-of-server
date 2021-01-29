@@ -18,7 +18,6 @@ const yelpService = {
 
     yelpDataClean(apiRes) { ///if no results reduce offset size based on total results possible return
         if(apiRes.businesses.length === 0) {
-            console.log(apiRes.total)
             return apiRes.total
         }
         else { ///if there are results return sorted results
