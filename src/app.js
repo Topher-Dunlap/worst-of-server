@@ -37,7 +37,6 @@ app.get('/api/search?*', (req, res) => {
         .then(function (response) {
             const yelpResString = (JSON.stringify(response.data));
             const yelpResParse = (JSON.parse(yelpResString))
-            console.dir(yelpResString)
             res.json(yelpService.yelpDataClean(yelpResParse));
         })
         .catch(function (error) {

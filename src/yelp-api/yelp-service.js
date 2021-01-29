@@ -16,12 +16,19 @@ const yelpService = {
         return axios(config)
     },
 
-    yelpDataClean(apiRes) {
-        let size = 3
-        let sortedData = apiRes.businesses.sort(function(a, b) {
-            return (a.rating - b.rating)
-        });
-        return sortedData.slice(0, size)},
+    yelpDataClean(apiRes) { ///if no results reduce offset size based on total results possible return
+        if(apiRes.businesses.length === 0) {
+            console.log(apiRes.total)
+            return apiRes.total
+        }
+        else { ///if there are results return sorted results
+            let size = 3
+            let sortedData = apiRes.businesses.sort(function(a, b) {
+                return (a.rating - b.rating)
+            });
+            return sortedData.slice(0, size)
+        }
+    }
 }
 
 module.exports = yelpService
