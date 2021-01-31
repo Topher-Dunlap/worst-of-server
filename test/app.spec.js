@@ -10,3 +10,11 @@ describe('App', () => {
     })
 })
 
+describe('Search Endpoint', () => {
+    it('GET / responds with 200', () => {
+        return supertest(app)
+            .get('/api/search?location=des moines, ia&term=coffee&limit=1&offset=0')
+            .expect(200)
+    })
+})
+

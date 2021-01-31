@@ -1,0 +1,1 @@
+DROP TABLE IF EXISTS worst_of_users
