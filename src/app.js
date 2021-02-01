@@ -5,7 +5,7 @@ const cors = require('cors')
 const helmet = require('helmet')
 const {NODE_ENV} = require('./config')
 const yelpRouter = require('./yelp/yelp-router')
-const accountRouter = require('./account/account-service')
+const accountRouter = require('./account/account-router')
 // const yelpService = require('./routers/yelp-service')
 
 const app = express()

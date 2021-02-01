@@ -36,23 +36,25 @@ yelpRouter
 
                                 ///insert new key values pair into object array being returned to client
                                 Object.assign(cleanedData[idx], {review: reviewString})
+
+                                ///response going to client
+                                res.json(cleanedData);
                             })
+
                             .catch(function (error) {
                                 console.log(error);
                             })
                     )
                 }
-                ///response going to client
-                res.json(cleanedData);
+                else {
+                    ///response going to client
+                    res.json(cleanedData);
+                }
             })
+
             .catch(function (error) {
                 console.log(error);
             })
-        // .then(function () {
-        //     console.log("Data before going back to client", cleanedData)
-        //     ///response going to client
-        //     res.json(cleanedData);
-        // });
     })
 
 module.exports = yelpRouter

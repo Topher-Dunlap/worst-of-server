@@ -25,16 +25,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c1f97f2b-40b5-4e2b-8465-b3574158f218" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/config.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/server.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/yelp-api/yelp-api.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/yelp-api/yelp-service.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/yelp/yelp-service.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/app.spec.js" beforeDir="false" afterPath="$PROJECT_DIR$/test/app.spec.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/yelp/yelp-router.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/yelp/yelp-router.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,6 +74,7 @@
       <updated>1607316369536</updated>
       <workItem from="1607316371651" duration="1244000" />
       <workItem from="1611415414538" duration="29494000" />
+      <workItem from="1612131461210" duration="3648000" />
     </task>
     <servers />
   </component>
@@ -97,6 +91,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
     <state x="393" y="112" key="#Inspections" timestamp="1612123586847">
