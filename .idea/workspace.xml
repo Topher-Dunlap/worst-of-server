@@ -25,9 +25,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c1f97f2b-40b5-4e2b-8465-b3574158f218" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/001.do.create_worst_of_users.sql" beforeDir="false" afterPath="$PROJECT_DIR$/migrations/001.do.create_worst_of_users.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/account/account-router.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/account/account-router.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/yelp/yelp-router.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/yelp/yelp-router.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/config.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/middleware/basic-auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/middleware/basic-auth.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,6 +64,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src" />
       <recent name="$PROJECT_DIR$/src/yelp" />
       <recent name="$PROJECT_DIR$/src/account" />
       <recent name="$PROJECT_DIR$/src/service" />
@@ -74,7 +81,8 @@
       <updated>1607316369536</updated>
       <workItem from="1607316371651" duration="1244000" />
       <workItem from="1611415414538" duration="29494000" />
-      <workItem from="1612131461210" duration="3648000" />
+      <workItem from="1612131461210" duration="8529000" />
+      <workItem from="1612230174349" duration="4132000" />
     </task>
     <servers />
   </component>
