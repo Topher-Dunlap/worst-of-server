@@ -28,12 +28,9 @@
       <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/migrations/001.do.create_worst_of_users.sql" beforeDir="false" afterPath="$PROJECT_DIR$/migrations/001.do.create_worst_of_users.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/postgrator-config.js" beforeDir="false" afterPath="$PROJECT_DIR$/postgrator-config.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/account/account-router.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/account/account-router.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/config.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/middleware/basic-auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/middleware/basic-auth.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/server.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,7 +79,7 @@
       <workItem from="1607316371651" duration="1244000" />
       <workItem from="1611415414538" duration="29494000" />
       <workItem from="1612131461210" duration="8529000" />
-      <workItem from="1612230174349" duration="4132000" />
+      <workItem from="1612230174349" duration="6200000" />
     </task>
     <servers />
   </component>

@@ -63,9 +63,9 @@ accountRouter
             .catch(next)
     })
     .post(jsonParser, (req, res, next) => {
-        console.dir("inside /auth/login POST")
         const {name, password} = req.body
         const loginUser = {name, password}
+        console.dir("inside /auth/login POST: ", loginUser)
 
         for (const [key, value] of Object.entries(loginUser))
             if (value == null)
