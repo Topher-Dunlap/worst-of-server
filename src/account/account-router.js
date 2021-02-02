@@ -63,8 +63,8 @@ accountRouter
             .catch(next)
     })
     .post(jsonParser, (req, res, next) => {
-        const {name, password} = req.body
-        const loginUser = {name, password}
+        const {email, password} = req.body
+        const loginUser = {email, password}
         console.dir("inside /auth/login POST: ", loginUser)
 
         for (const [key, value] of Object.entries(loginUser))
@@ -75,14 +75,14 @@ accountRouter
 
         AuthService.getUserWithUserName(
             req.app.get('db'),
-            loginUser.name
+            loginUser.email
         )
             .then(dbUser => {
                 if (!dbUser)
                     return res.status(400).json({
                         error: 'Incorrect user_name or password',
                     })
-                    const sub = dbUser.name
+                    const sub = dbUser.email
                     const payload = { user_id: dbUser.id }
                     res.send({
                           authToken: AuthService.createJwt(sub, payload),
