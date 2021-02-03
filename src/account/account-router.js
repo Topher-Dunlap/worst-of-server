@@ -1,7 +1,7 @@
 const express = require('express');
 const xss = require('xss');
 const AccountService = require('./account-service');
-const {requireAuth} = require('../middleware/basic-auth');
+const { requireAuth } = require('../middleware/jwt-auth')
 const AuthService = require('../auth/auth-service');
 const jsonParser = express.json();
 const accountRouter = express.Router();
@@ -65,7 +65,6 @@ accountRouter
     .post(jsonParser, (req, res, next) => {
         const {email, password} = req.body
         const loginUser = {email, password}
-        console.dir("inside /auth/login POST: ", loginUser)
 
         for (const [key, value] of Object.entries(loginUser))
             if (value == null)

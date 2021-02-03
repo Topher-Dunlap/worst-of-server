@@ -1,13 +1,13 @@
 const express = require('express');
 // const xss = require('xss');
-const { requireAuth } = require('../middleware/basic-auth')
+const { requireAuth } = require('../middleware/jwt-auth')
 const yelpService = require('./yelp-service');
 
 const yelpRouter = express.Router();
 
 yelpRouter
     .route('/search?*')
-    .all(requireAuth)
+    // .all(requireAuth)
     .get((req, res, next) => {
         const apiQueryValues = {
             term: req.query.term,
@@ -24,23 +24,22 @@ yelpRouter
                 if (Object.prototype.toString.call(cleanedData) === '[object Array]') {
 
                     ///get business ID from each returned business to insert into review GET req
-                    const businessReviews = yelpService.retrieveReviews(cleanedData);
+                    const businessId = yelpService.retrieveReviews(cleanedData);
 
                     ///for each business ID make a GET req for reviews using .map
-                    businessReviews.map((review, idx) =>
+                    businessId.map((review, idx) =>
                         yelpService.yelpReviewsCall(review)
                             .then(function (response) {
 
                                 ///strip review.text from returned reviews
-                                let reviewString = JSON.stringify(response.data.reviews[0].text);
+                                let reviewString = response.data.reviews[0].text;
 
                                 ///insert new key values pair into object array being returned to client
                                 Object.assign(cleanedData[idx], {review: reviewString})
 
                                 ///response going to client
-                                res.json(cleanedData);
+                                return (idx === 2 ? res.json(cleanedData): false);
                             })
-
                             .catch(function (error) {
                                 console.log(error);
                             })
