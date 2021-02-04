@@ -22,6 +22,7 @@ accountRouter
             .catch(next)
     })
     .post(jsonParser, (req, res, next) => {
+        console.log("Inside POST /auth/login")
         const {email, password} = req.body
         const loginUser = {email, password}
 
