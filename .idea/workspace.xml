@@ -25,12 +25,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c1f97f2b-40b5-4e2b-8465-b3574158f218" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/migrations/001.do.create_worst_of_users.sql" beforeDir="false" afterPath="$PROJECT_DIR$/migrations/001.do.create_worst_of_users.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/account/account-router.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/account/account-router.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/setup.js" beforeDir="false" afterPath="$PROJECT_DIR$/test/setup.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/worst-of-scripts/create.worst-of.sql" beforeDir="false" afterPath="$PROJECT_DIR$/worst-of-scripts/create.worst-of.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/account/account-service.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/account/account-service.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/auth-endpoints.spec.js" beforeDir="false" afterPath="$PROJECT_DIR$/test/auth-endpoints.spec.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -110,7 +109,7 @@
       <workItem from="1612131461210" duration="8529000" />
       <workItem from="1612230174349" duration="27486000" />
       <workItem from="1612370497321" duration="133000" />
-      <workItem from="1612372713195" duration="5181000" />
+      <workItem from="1612372713195" duration="17931000" />
     </task>
     <servers />
   </component>
@@ -246,5 +245,9 @@
     <state width="1340" height="207" key="GridCell.Tab.3.right/0.23.1440.829@0.23.1440.829" timestamp="1612335410457" />
     <state width="1340" height="314" key="GridCell.Tab.3.right/0.25.1440.814@0.25.1440.814" timestamp="1612373898982" />
     <state width="1340" height="204" key="GridCell.Tab.3.right/0.25.1440.815@0.25.1440.815" timestamp="1612373825322" />
+    <state x="424" y="351" key="run.anything.popup" timestamp="1612389307073">
+      <screen x="0" y="25" width="1440" height="815" />
+    </state>
+    <state x="424" y="351" key="run.anything.popup/0.25.1440.815@0.25.1440.815" timestamp="1612389307073" />
   </component>
 </project>
