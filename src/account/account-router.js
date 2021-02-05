@@ -19,7 +19,9 @@ accountRouter
                     console.dir("user logged in")
                 }
             })
-            .catch(next)
+            .catch(function (error) {
+                console.log(error);
+            })
     })
     .post(jsonParser, (req, res, next) => {
         const {email, password} = req.body
@@ -55,7 +57,9 @@ accountRouter
                         })
                     })
             })
-            .catch()
+            .catch(function (error) {
+                console.log(error);
+            })
     })
 
 accountRouter
@@ -99,7 +103,9 @@ accountRouter
                             })
                     })
             })
-            .catch(next)
+            .catch(function (error) {
+                console.log(error);
+            })
     })
 
 
