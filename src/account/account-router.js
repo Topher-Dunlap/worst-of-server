@@ -62,12 +62,14 @@ accountRouter
 accountRouter
     .route('/create')
     .post(jsonParser, (req, res, next) => {
+        console.log("inside the register POST")
         const {password, first_name, last_name, email} = req.body
         for (const field of ['first_name', 'last_name', 'password', 'email'])
             if (!req.body[field])
                 return res.status(400).json({
                     error: `Missing '${field}' in request body`
                 })
+        console.log("after For of register POST")
         const passwordError = AccountService.validatePassword(password)
 
         if (passwordError)
