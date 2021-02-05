@@ -12,6 +12,7 @@ const db = knex({
     },
 })
 
+console.log(db)
 app.set('db', db)
 
 app.listen(PORT, () => {
