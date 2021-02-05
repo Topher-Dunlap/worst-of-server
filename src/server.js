@@ -6,9 +6,9 @@ const db = knex({
     client: 'pg',
     connection: {
         connectionString: DATABASE_URL,
-        // ssl: {
-        //     rejectedUnauthorized: false,
-        // },
+        ssl: {
+            rejectedUnauthorized: false,
+        },
     },
 })
 
