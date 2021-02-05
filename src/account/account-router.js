@@ -69,7 +69,6 @@ accountRouter
                     error: `Missing '${field}' in request body`
                 })
         const passwordError = AccountService.validatePassword(password)
-        console.log("passwordError", passwordError)
 
         if (passwordError)
             return res.status(400).json({error: passwordError})
