@@ -73,6 +73,7 @@ accountRouter
         if (passwordError)
             return res.status(400).json({error: passwordError})
         AccountService.hasUserWithEmail(
+            console.log("AccountService.hasUserWithEmail, database: ", db),
             req.app.get('db'),
             email
         )
