@@ -33,9 +33,20 @@ yelpRouter
 
                                 ///strip review.text from returned reviews
                                 let reviewString = response.data.reviews[0].text;
+                                let reviewUrl = response.data.reviews[0].url;
+                                let reviewerImg = response.data.reviews[0].user.image_url;
+
+                                console.log(
+                                    "reviewUrl: ", reviewUrl,
+                                    " reviewerImg: ", reviewerImg
+                                )
 
                                 ///insert new key values pair into object array being returned to client
-                                Object.assign(cleanedData[idx], {review: reviewString})
+                                Object.assign(cleanedData[idx],
+                                    {review: reviewString},
+                                    {reviewUrl: reviewUrl},
+                                    {reviewerImg: reviewerImg}
+                                    )
 
                                 ///response going to client
                                 return (idx === 2 ? res.json(cleanedData): false);
