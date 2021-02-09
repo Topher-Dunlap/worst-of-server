@@ -1,4 +1,3 @@
-const jwt = require('jsonwebtoken')
 const bcrypt = require('bcryptjs')
 
 function makeUsersArray() {
@@ -48,15 +47,6 @@ function seedUsers(db, users) {
         )
 }
 
-function makeAuthHeader(user, secret = process.env.JWT_SECRET) {
-    const token = jwt.sign({user_id: user.id}, secret, {
-        subject: user.user_name,
-        algorithm: 'HS256',
-    })
-    return `Bearer ${token}`
-}
-
-
 function makeArticlesFixtures() {
     const testUsers = makeUsersArray()
     return {testUsers}
@@ -79,7 +69,6 @@ function cleanTables(db) {
 }
 
 module.exports = {
-    makeUsersArray,
     makeArticlesFixtures,
     seedUsers,
     cleanTables,

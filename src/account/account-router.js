@@ -1,7 +1,5 @@
 const express = require('express');
-// const xss = require('xss');
 const AccountService = require('./account-service');
-// const {requireAuth} = require('../middleware/jwt-auth');
 const path = require('path')
 const AuthService = require('../auth/auth-service');
 const jsonParser = express.json();

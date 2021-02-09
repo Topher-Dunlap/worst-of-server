@@ -1,6 +1,4 @@
 const express = require('express');
-// const xss = require('xss');
-const { requireAuth } = require('../middleware/jwt-auth')
 const yelpService = require('./yelp-service');
 
 const yelpRouter = express.Router();
@@ -35,11 +33,6 @@ yelpRouter
                                 let reviewString = response.data.reviews[0].text;
                                 let reviewUrl = response.data.reviews[0].url;
                                 let reviewerImg = response.data.reviews[0].user.image_url;
-
-                                console.log(
-                                    "reviewUrl: ", reviewUrl,
-                                    " reviewerImg: ", reviewerImg
-                                )
 
                                 ///insert new key values pair into object array being returned to client
                                 Object.assign(cleanedData[idx],
