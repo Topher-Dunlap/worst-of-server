@@ -1,26 +1,44 @@
-# Express Boilerplate!
 
-This is a boilerplate project used for starting new projects!
+https://worst-of-client-4s5nnyjyl.vercel.app/
 
-## Set up
 
-Complete the following steps to start a new project (NEW-PROJECT-NAME):
+# Worst-Of
+This app allows the user to search for the worst Restaurants, bars or coffee establishments in a given area.
+The users default location will be determined via their IP address.
+Their city will be automatically populated into the search bar for ease fo use.
+The worst rated businesses will be returned, parsed and displayed from the Yelp Fusion API. 
+If a given area does not have enough results to return the number will be adjusted automatically and re-requested for the max number of results possible.
+Results display the default picture of the business, URL to the businesses Yelp page, overall rating, a user review, link to user review, user photo and address which will route you to google maps if clicked on.  Users will need to create an account in order to use the app features. 
+However, there is a demo account available for users to test the functionality of the app. It is listed on the landing page for ease of use.
 
-1. Clone this repository to your local machine `git clone BOILERPLATE-URL NEW-PROJECTS-NAME`
-2. `cd` into the cloned repository
-3. Make a fresh start of the git history for this project with `rm -rf .git && git init`
-4. Install the node dependencies `npm install`
-5. Move the example Environment file to `.env` that will be ignored by git and read by the express server `mv example.env .env`
-6. Edit the contents of the `package.json` to use NEW-PROJECT-NAME instead of `"name": "express-boilerplate",`
+## Motivation
+My motivation for this app was to create something that utilized client and server side technologies in an interesting way. It's common to see "best of" lists but never dynamic "Worst Of" list. In the age of experiences this type of app is exactly what Millennial's ordered.
 
-## Scripts
+## Built With
 
-Start the application `npm start`
+### Back-End
+* Node.js
+* Express
+* Express Router
+* Postgres
+* SQL
+* Knex
+* Postgrator
+* Jest
+* JWT
+* Service Objects
+* Morgan
 
-Start nodemon for the application `npm run dev`
 
-Run the tests `npm test`
+## Features
 
-## Deploying
+* Express Router
+* Unit and Integration testing
+* JWT authentication 
+* Multiple REST API calls
 
-When your new project is ready for deployment, add a new Heroku application with `heroku create`. This will make a new git remote called "heroku" and you can then `npm run deploy` which will push to this remote's main branch.
+
+## Authors
+
+* **Topher Dunlap** - ** - Design, Front-End development/testing, styling, deployment and iteration.
+
