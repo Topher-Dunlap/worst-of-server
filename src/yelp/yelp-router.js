@@ -56,6 +56,7 @@ yelpRouter
             })
 
             .catch(function (error) {
+                console.dir("error: ", error)
                 res.status(400).send({ error: "Something went wrong. Please try again or pick a different region." });
             })
     })
