@@ -45,7 +45,7 @@ yelpRouter
                                 return (idx === 2 ? res.json(cleanedData): false);
                             })
                             .catch(function (error) {
-                                console.log(error);
+                                res.status(400).send({ error: "Something went wrong. Please try again or pick a different region." });
                             })
                     )
                 }
@@ -56,7 +56,7 @@ yelpRouter
             })
 
             .catch(function (error) {
-                console.log(error);
+                res.status(400).send({ error: "Something went wrong. Please try again or pick a different region." });
             })
     })
 

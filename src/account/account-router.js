@@ -14,11 +14,11 @@ accountRouter
         )
             .then(account => {
                 if (account) {
-                    console.dir("user logged in")
+                    res.status(200);
                 }
             })
             .catch(function (error) {
-                console.log(error);
+                res.status(404).send({ error: "Account does not exist" });
             })
     })
     .post(jsonParser, (req, res, next) => {
@@ -53,10 +53,11 @@ accountRouter
                         res.send({
                             authToken: AuthService.createJwt(sub, payload),
                         })
+                        res.status(200).send({ success: "User logged in." });
                     })
             })
             .catch(function (error) {
-                console.log(error);
+                res.status(400).send({ error: "Something went wrong please try again" });
             })
     })
 
@@ -95,14 +96,14 @@ accountRouter
                         )
                             .then(user => {
                                 res
-                                    .status(201)
+                                    .status(201).send({ success: "User Account Created." })
                                     .location(path.posix.join(req.originalUrl, `/${user.id}`))
                                     .json(AccountService.serializeUser(user))
                             })
                     })
             })
             .catch(function (error) {
-                console.log(error);
+                res.status(400).send({ error: "Something went wrong please try again" });
             })
     })
 
