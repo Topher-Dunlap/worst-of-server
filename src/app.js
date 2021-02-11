@@ -30,7 +30,6 @@ app.use(function errorHandler(error, req, res, next) {
         response = {error: {message: 'server error'}}
     } else {
         response = error
-        console.error("this is the app.use errorHandle", response)
     }
     res.status(500).json(response)
 })
