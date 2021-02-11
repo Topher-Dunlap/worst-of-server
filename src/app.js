@@ -13,9 +13,9 @@ const morganOption = (NODE_ENV === 'production')
     ? 'tiny'
     : 'common';
 
-app.use(cors())
 app.use(morgan(morganOption))
 app.use(helmet())
+app.use(cors())
 
 app.use('/api/searchForm', yelpRouter)
 app.use('/api/account', accountRouter)
