@@ -14,7 +14,7 @@ yelpRouter
         }
         yelpService.yelpAPICall(apiQueryValues)
             .then(function (response) {
-                console.log("yelpService.yelpAPICall: ", response.status)
+                console.log("yelpService.yelpAPICall: ", response)
                 const yelpResString = (JSON.stringify(response.data));
                 const yelpResParse = (JSON.parse(yelpResString));
                 const cleanedData = yelpService.yelpDataClean(yelpResParse);
@@ -30,7 +30,7 @@ yelpRouter
                     businessId.map((review, idx) =>
                         yelpService.yelpReviewsCall(review)
                             .then(function (response) {
-                                console.log("2nd yelpService.yelpAPICall: ", response.status)
+                                console.log("2nd yelpService.yelpAPICall: ", response)
 
                                 ///strip review.text from returned reviews
                                 let reviewString = response.data.reviews[0].text;
