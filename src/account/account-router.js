@@ -103,7 +103,6 @@ accountRouter
                     })
             })
             .catch(function (error) {
-                console.dir("Register error: ", error)
                 res.status(400).send({ error: "Something went wrong please try again" });
             })
     })

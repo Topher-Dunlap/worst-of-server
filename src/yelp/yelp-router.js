@@ -1,12 +1,12 @@
 const express = require('express');
 const yelpService = require('./yelp-service');
-
+const timeout = require('connect-timeout')
 const yelpRouter = express.Router();
 
 yelpRouter
     .route('/search?*')
-    // .all(requireAuth)
-    .get((req, res, next) => {
+    .get( timeout( "4s"), (req, res, next) => {
+
         const apiQueryValues = {
             term: req.query.term,
             location: req.query.location,
@@ -56,7 +56,6 @@ yelpRouter
             })
 
             .catch(function (error) {
-                console.dir("error: ", error)
                 res.status(400).send({ error: "Something went wrong. Please try again or pick a different region." });
             })
     })
