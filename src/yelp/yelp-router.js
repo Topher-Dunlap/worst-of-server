@@ -54,7 +54,7 @@ yelpRouter
                 }
                 else {
                     ///response going to client
-                    console.log("checking cleanedData: ", cleanedData)
+                    console.log("Adjusted total businesses available: ", cleanedData)
                     res.json(cleanedData);
                 }
             })
