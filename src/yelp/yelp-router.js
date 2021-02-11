@@ -14,6 +14,7 @@ yelpRouter
         }
         yelpService.yelpAPICall(apiQueryValues)
             .then(function (response) {
+                console.log("Direct yelp API response: ", response)
                 const yelpResString = (JSON.stringify(response.data));
                 const yelpResParse = (JSON.parse(yelpResString));
                 const cleanedData = yelpService.yelpDataClean(yelpResParse);
