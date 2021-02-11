@@ -14,13 +14,14 @@ yelpRouter
         }
         yelpService.yelpAPICall(apiQueryValues)
             .then(function (response) {
-                console.log("Direct yelp API response: ", response)
+                console.log("yelpService.yelpAPICall: ", response.status)
                 const yelpResString = (JSON.stringify(response.data));
                 const yelpResParse = (JSON.parse(yelpResString));
                 const cleanedData = yelpService.yelpDataClean(yelpResParse);
 
                 ///add reviews is data returned
                 if (Object.prototype.toString.call(cleanedData) === '[object Array]') {
+
 
                     ///get business ID from each returned business to insert into review GET req
                     const businessId = yelpService.retrieveReviews(cleanedData);
@@ -29,6 +30,7 @@ yelpRouter
                     businessId.map((review, idx) =>
                         yelpService.yelpReviewsCall(review)
                             .then(function (response) {
+                                console.log("2nd yelpService.yelpAPICall: ", response.status)
 
                                 ///strip review.text from returned reviews
                                 let reviewString = response.data.reviews[0].text;
