@@ -5,7 +5,7 @@ const yelpRouter = express.Router();
 
 yelpRouter
     .route('/search?*')
-    .get( timeout( "6s"), (req, res, next) => {
+    .get(  timeout( "6s"),(req, res, next) => {
 
         const apiQueryValues = {
             term: req.query.term,
