@@ -51,6 +51,7 @@ yelpRouter
                 }
                 else {
                     ///response going to client
+                    console.log("checking cleanedData: ", cleanedData)
                     res.json(cleanedData);
                 }
             })
